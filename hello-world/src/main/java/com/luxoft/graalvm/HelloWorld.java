@@ -1,42 +1,16 @@
 package com.luxoft.graalvm;
 
-import org.graalvm.polyglot.Context;
-import org.graalvm.polyglot.Value;
+class HelloWorld {
 
-public class HelloWorld {
-
+    // Set up PATH and JAVA_HOME according to
+    // https://www.graalvm.org/docs/getting-started-with-graalvm/windows/
+    // or
+    // https://www.graalvm.org/docs/getting-started-with-graalvm/linux/
+    //
+    // javac src/main/java/com/luxoft/graalvm/HelloWorld.java
+    // cd src/main/java
+    // java com.luxoft.graalvm.HelloWorld
     public static void main(String[] args) {
-        System.out.println("Hello Java!");
-        simpleJsRun();
-        runJsFunction();
-        accessLanguagesDirectly();
-    }
-
-    private static void simpleJsRun() {
-        try (Context context = Context.create()) {
-            context.eval("js", "print('Hello JavaScript!');");
-        }
-    }
-
-    private static void runJsFunction() {
-        try (Context context = Context.create()) {
-            Value function = context.eval("js", "x => x+1");
-            assert function.canExecute();
-            int x = function.execute(41).asInt();
-            System.out.println(x); // 42
-        }
-    }
-
-    private static void accessLanguagesDirectly() {
-        try (Context context = Context.create()) {
-            Value result = context.eval("js",
-                "({ " +
-                    "id   : 42" +
-                    "})");
-            assert result.hasMembers();
-
-            int id = result.getMember("id").asInt();
-            System.out.println(id); // 42
-        }
+        System.out.println("Hello world!");
     }
 }

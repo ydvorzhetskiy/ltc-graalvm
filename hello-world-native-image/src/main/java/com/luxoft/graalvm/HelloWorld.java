@@ -8,7 +8,7 @@ class HelloWorld {
     // https://www.graalvm.org/docs/getting-started-with-graalvm/linux/
     //
     // javac src/main/java/com/luxoft/graalvm/HelloWorld.java -d target
-    // open x64 Native Tools Command Prompt for VS 2019
+    // open 'x64 Native Tools Command Prompt for VS 2019' (via Start Menu)
     // native-image -cp target com.luxoft.graalvm.HelloWorld my-hello-world
     // my-hello-world.exe
     //
