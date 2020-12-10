@@ -11,8 +11,17 @@ class HelloWorld {
     // open x64 Native Tools Command Prompt for VS 2019
     // native-image -cp target com.luxoft.graalvm.HelloWorld my-hello-world
     // my-hello-world.exe
+    //
+    // or
+    //
+    // mvn clean install
+    // open x64 Native Tools Command Prompt for VS 2019
+    // native-image -jar target/hello-world-native-image-1.0.jar my-hello-world
+    // my-hello-world.exe
+
 
     public static void main(String[] args) {
         System.out.println("Hello world!");
     }
 }
+
