@@ -12,6 +12,7 @@
 
     <modules>
         <module>hello-world</module>
+        <module>hello-world-polyglot</module>
         <module>hello-world-native-image</module>
     </modules>
 </project>
