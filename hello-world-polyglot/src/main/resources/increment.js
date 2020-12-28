@@ -1,1 +1,2 @@
-const constantFunction = x => x+1;
+// increment.js
+const incrementFunction = x => x + 1;

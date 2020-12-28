@@ -1,16 +1,26 @@
 package com.luxoft.graalvm;
 
 import org.graalvm.polyglot.Context;
+import org.graalvm.polyglot.Source;
 import org.graalvm.polyglot.Value;
 
-public class HelloWorldCombineContexts {
+import java.io.IOException;
 
-    public static void main(String[] args) {
-        try (Context context = Context.create().eval()) {
-            Value function = context.eval("js", "x => x+1");
-            assert function.canExecute();
-            int x = function.execute(41).asInt();
-            System.out.println(x); // 42
+public class HelloWorldCombineFiles {
+
+    public static void main(String[] args) throws IOException {
+        try (Context context = Context.create()) {
+            context.eval(Source.newBuilder("js",
+                HelloWorldCombineFiles.class.getClassLoader()
+                    .getResource("constant.js")
+            ).build());
+            context.eval(Source.newBuilder("js",
+                HelloWorldCombineFiles.class.getClassLoader()
+                    .getResource("increment.js")
+            ).build());
+            Value value = context.eval("js", "incrementFunction(constantFunction())");
+            int x = value.asInt();
+            System.out.println(x); // 43
         }
     }
 }

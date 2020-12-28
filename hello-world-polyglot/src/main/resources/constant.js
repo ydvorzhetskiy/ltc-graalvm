@@ -1,1 +1,2 @@
-const constantFunction = x => x+1;
+// constant.js
+const constantFunction = x => 42;
