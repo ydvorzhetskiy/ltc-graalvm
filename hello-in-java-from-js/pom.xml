@@ -5,15 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.luxoft.graalvm</groupId>
-    <artifactId>graalvm-examples</artifactId>
+    <artifactId>hello-in-java-from-js</artifactId>
     <version>1.0</version>
 
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>hello-world</module>
-        <module>hello-world-polyglot</module>
-        <module>hello-world-native-image</module>
-        <module>hello-in-java-from-js</module>
-    </modules>
+    <properties>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 </project>
