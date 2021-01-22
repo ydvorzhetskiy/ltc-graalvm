@@ -1,0 +1,78 @@
+# JMH version: 1.27
+# VM version: JDK 11.0.9, OpenJDK 64-Bit Server VM, 11.0.9+10-jvmci-20.3-b06
+# VM invoker: C:\Program Files\Java\graalvm-ce-java11-20.3.0\bin\java.exe
+# VM options: -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCIProduct -XX:-UnlockExperimentalVMOptions -XX:ThreadPriorityPolicy=1 -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\lib\idea_rt.jar=52908:C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin -Dfile.encoding=UTF-8
+# JMH blackhole mode: full blackhole + dont-inline hint
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 10 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: com.luxoft.graalvm.benchmarks.FibonacciBenchmark.benchmark
+# Parameters: (n = 42)
+
+# Run progress: 0,00% complete, ETA 00:03:40
+# Warmup Fork: 1 of 1
+# Warmup Iteration   1: 1,549 s/op
+# Warmup Iteration   2: 1,691 s/op
+# Warmup Iteration   3: 1,616 s/op
+# Warmup Iteration   4: 1,357 s/op
+# Warmup Iteration   5: 1,430 s/op
+# Warmup Iteration   6: 1,357 s/op
+# Warmup Iteration   7: 1,355 s/op
+# Warmup Iteration   8: 1,355 s/op
+# Warmup Iteration   9: 1,357 s/op
+# Warmup Iteration  10: 1,360 s/op
+Iteration   1: 1,356 s/op
+Iteration   2: 1,355 s/op
+Iteration   3: 1,355 s/op
+Iteration   4: 1,357 s/op
+Iteration   5: 1,354 s/op
+Iteration   6: 1,354 s/op
+Iteration   7: 1,367 s/op
+Iteration   8: 1,353 s/op
+Iteration   9: 1,407 s/op
+Iteration  10: 1,420 s/op
+
+# Run progress: 50,00% complete, ETA 00:02:04
+# Fork: 1 of 1
+# Warmup Iteration   1: 1,581 s/op
+# Warmup Iteration   2: 1,539 s/op
+# Warmup Iteration   3: 1,443 s/op
+# Warmup Iteration   4: 1,398 s/op
+# Warmup Iteration   5: 1,379 s/op
+# Warmup Iteration   6: 1,362 s/op
+# Warmup Iteration   7: 1,388 s/op
+# Warmup Iteration   8: 1,389 s/op
+# Warmup Iteration   9: 1,431 s/op
+# Warmup Iteration  10: 1,405 s/op
+Iteration   1: 1,417 s/op
+Iteration   2: 1,425 s/op
+Iteration   3: 1,423 s/op
+Iteration   4: 1,435 s/op
+Iteration   5: 1,406 s/op
+Iteration   6: 1,416 s/op
+Iteration   7: 1,405 s/op
+Iteration   8: 1,407 s/op
+Iteration   9: 1,414 s/op
+Iteration  10: 1,415 s/op
+
+
+Result "com.luxoft.graalvm.benchmarks.FibonacciBenchmark.benchmark":
+  1,416 ±(99.9%) 0,014 s/op [Average]
+  (min, avg, max) = (1,405, 1,416, 1,435), stdev = 0,009
+  CI (99.9%): [1,402, 1,430] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:04:11
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                     (n)  Mode  Cnt  Score   Error  Units
+FibonacciBenchmark.benchmark   42  avgt   10  1,416 ± 0,014   s/op
+
+Process finished with exit code 0

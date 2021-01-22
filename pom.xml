@@ -15,5 +15,6 @@
         <module>hello-world-polyglot</module>
         <module>hello-world-native-image</module>
         <module>hello-in-java-from-js</module>
+        <module>benchmarks</module>
     </modules>
 </project>
