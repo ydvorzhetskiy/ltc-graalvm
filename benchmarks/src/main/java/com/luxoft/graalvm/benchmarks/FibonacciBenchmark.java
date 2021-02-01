@@ -17,6 +17,6 @@ public class FibonacciBenchmark {
 
     @Benchmark
     public void benchmark() {
-        fib(42);
+        fib(41);
     }
 }
